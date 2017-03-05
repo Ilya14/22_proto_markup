@@ -1,0 +1,48 @@
+{% extends "_base.html" %}
+
+    {% block title %}Личный кабинет{% endblock title %}
+
+    {% block content %}
+
+    <div class="navbar-container">
+      <div class="row">
+        <div class="col-md-2" align="center">
+          <img src="../img/logo.png" class="img-rounded" alt="Логотип" width="64" height="64">
+        </div>
+        <div class="col-md-10" align="left">
+          <ol class="breadcrumb">
+            <li><a href="../index.html">Главная</a></li>
+            <li class="active">Личный кабинет</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+       <h1 align="left">Личный кабинет</h1>
+       <h6 align="right"><a href="applications.html">Перейти к заявкам</a></h6>
+      </div>
+
+      <div class="tabbable">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#tab1" data-toggle="tab">Моя организация</a></li>
+          <li><a href="#tab2" data-toggle="tab">Смена пароля</a></li>
+          <li><a href="#tab3" data-toggle="tab">Моя рассылка</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="tab1">
+            <p>Редактирование информации об организации...</p>
+          </div>
+          <div class="tab-pane fade" id="tab2">
+            <p>Смена пароля...</p>
+          </div>
+          <div class="tab-pane fade" id="tab3">
+            <p>Рассылка...</p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->     
+    {% endblock content %}

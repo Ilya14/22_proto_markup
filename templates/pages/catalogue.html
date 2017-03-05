@@ -1,0 +1,126 @@
+{% extends "_footer.html" %}
+
+    {% block title %}Каталог организаций{% endblock title %}
+
+    {% block content %}
+    <div class="navbar-container">
+      <div class="row">
+        <div class="col-md-2" align="center">
+          <img src="../img/logo.png" class="img-rounded" alt="Логотип" width="64" height="64">
+        </div>
+        <div class="col-md-10" align="left">
+          <ol class="breadcrumb">
+            <li><a href="../index.html">Главная</a></li>
+            <li class="active">Каталог организаций</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="../img/gbi.jpg" alt="ЖБИ">
+            <div class="caption">
+              <h5><a href="concrete_goods.html">ЖБИ</a></h5> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="../img/kirpich.jpg" alt="Кирпич, Газобетон, Брус">
+            <div class="caption">
+              <h5><a href="#">Кирпич, Газобетон, Брус</a></h5> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="#" alt="Что-то еще">
+            <div class="caption">
+              <h5><a href="#">Что-то еще</a></h5> 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="#" alt="Что-то еще">
+            <div class="caption">
+              <h5><a href="#">Что-то еще</a></h5> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h1>Все производители и оптовые компании</h1>        
+      </div>
+     
+      <div class="row">
+        <div class="col-md-9" align="center">
+        <table class="table table-hover table-bordered">
+          <tbody>
+            <tr>
+              <td>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="../img/logo.png" alt="Логотип организации" width="64" height="64">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">ООО Строй-Сервис-Монтаж</h4>
+                    <address>
+                      <strong>Место деятельности: </strong> Новосибирск <br>
+                      <strong>Продукция: </strong> ЖБИ, бетон <br>
+                      <strong>Адрес: </strong> Под часами, на том же месте <br>
+                      <strong>Телефон: </strong> 00-00-00 <br>
+                    </address>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="../img/logo.png" alt="Логотип организации" width="64" height="64">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">ООО Строй-Сервис-Монтаж</h4>
+                    <address>
+                      <strong>Место деятельности: </strong> Новосибирск <br>
+                      <strong>Продукция: </strong> ЖБИ, бетон <br>
+                      <strong>Адрес: </strong> Под часами, на том же месте <br>
+                      <strong>Телефон: </strong> 00-00-00 <br>
+                    </address>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary btn-sm" onclick="location.href='../index.html'">Оставить заявку</button>
+        </div>
+      </div> <!-- row -->
+
+      <div class="row">
+        <div class="col-md-12" align="center">
+          <ul class="pagination" align="center">
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p><a href="../index.html">Оставить заявку</a></p>
+
+    </div> <!-- /container -->
+    {% endblock content %}

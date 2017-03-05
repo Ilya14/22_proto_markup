@@ -1,0 +1,108 @@
+{% extends "_footer.html" %}
+
+    {% block title %}Заявки{% endblock title %}
+
+    {% block content %}
+    <div class="navbar-container">
+      <div class="row">
+        <div class="col-md-2" align="center">
+          <img src="../img/logo.png" class="img-rounded" alt="Логотип" width="64" height="64">
+        </div>
+        <div class="col-md-10" align="left">
+          <ol class="breadcrumb">
+            <li><a href="../index.html">Главная</a></li>
+            <li class="active">Заявки</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Заявки</h1>        
+      </div>
+     
+      <!-- applications -->
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>
+              <div class="row">
+                <div class="col-md-6" align="left">
+                  раздел: 
+                  <span class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      Все <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Действие</a></li>
+                    </ul>
+                 </span>
+                </div>
+                <div class="col-md-6" align="right">
+                  регион: 
+                  <span class="dropdown">
+                    <a id="AppsRegionString" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                     Выбрать <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                     <li><a href="#">Действие</a></li>
+                    </ul>
+                  </span>
+                </div>
+              </div> <!-- row -->
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for app in applications %}
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col-md-6" align="left">
+                  <span class="text-muted">{{app['date']}}</span>
+                </div>
+                <div class="col-md-6" align="right">
+                  <a class="text-muted" href="#"><span class="glyphicon glyphicon-star"></span> в закладки</a>
+                </div>
+              </div> <!-- row -->
+              <div class="row">
+                <div class="col-md-12" align="left">
+                  <p>{{app['description']}}</p>
+                  <p>{{app['user_name']}}</p>
+                </div>
+              </div> <!-- row -->
+              <div class="row" align="left">
+                <div class="col-md-3">
+                  <button type="button" class="btn btn-primary btn-xs">Показать телефон</button>
+                </div>
+                <div class="col-md-3">
+                  <p>{{app['viewings_count']}} просмотров</p>
+                </div>
+              </div> <!-- row -->
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="col-md-12" align="center">
+          <button type="button" class="btn btn-primary">Показать еще</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" align="center">
+          <ul class="pagination" align="center">
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="applications_p2.html">2</a></li>
+            <li><a href="applications_p2.html">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+    {% endblock content %}

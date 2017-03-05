@@ -1,0 +1,73 @@
+{% extends "_base.html" %}
+
+{% block footer %}
+    <footer class="footer">
+      <div class="supplier-container">
+        <div class="row">
+          <div class="col-md-12" align="center">
+            <h2>Вы поставщик?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" align="left">
+            <p>
+              Для доступа к телефонам покупателей заполните форму или позвоните нам: <br> +7 999-888-77-66
+            </p>
+          </div>
+          <div class="col-md-6" align="left">
+            <div class="row">
+              <div class="col-md-4" align="right">
+                <div class="form-group">
+                  <label for="OrgName">Организация</label>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="OrgName" placeholder="Введите название Вашей организации">
+                </div>               
+              </div>
+            </div> <!-- row -->
+            <div class="row">
+              <div class="col-md-4" align="right">
+                <div class="form-group">
+                  <label for="OrgPhone">Телефон</label>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="OrgPhone" placeholder="Введите номер телефона">
+                </div>               
+              </div>
+            </div> <!-- row -->
+            <div class="row">
+              <div class="col-md-4" align="right">
+                <div class="form-group">
+                  <label for="OrgEMail">EMail</label>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="OrgEMail" placeholder="Введите e-mail">
+                </div>               
+              </div>
+            </div> <!-- row -->
+            <div class="row">
+              <div class="col-md-4" align="right">
+                <div class="form-group">
+                  <label for="SupplierName">Имя</label>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="SupplierName" placeholder="Введите имя">
+                </div>               
+              </div>
+            </div> <!-- row -->
+            <div class="row col-md-12" align="center">
+              <button type="button" class="btn btn-primary">Отправить информацию</button>
+            </div> <!-- row -->
+          </div>
+        </div>
+      </div>
+    </footer>
+{% endblock %}

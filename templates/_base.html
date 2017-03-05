@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    {% block head %}
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    {% endblock head %}
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body> 
+    <!-- Modal -->
+    <div id="RegionsModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Выбор региона</h4>
+          </div>
+
+          <div class="modal-body">
+            <p>
+              <a href="#" onclick="setRegion(this);">Москва и область</a><br>
+              <a href="#" onclick="setRegion(this);">Санкт-Петербург и область</a><br>
+              <a href="#" onclick="setRegion(this);">Новосибирск и область</a><br>
+            </p>
+          </div>
+          <!-- Футер модального окна -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">            
+            <li class="dropdown" data-toggle="popover">
+              <a id="NavbarRegionString" class="dropdown-toggle popover-bottom" data-toggle="dropdown">
+                Регион <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="setRegion(this);">Москва и область</a></li>
+                <li><a href="#" onclick="setRegion(this);">Санкт-Петербург и область</a></li>
+                <li><a href="#" onclick="setRegion(this);">Новосибирск и область</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-link"><a href={% block account %}account.html{% endblock %}>Леонид Федорович</a></li>
+            <li><a href="#">Выход</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}{% endblock %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block scripts %}
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    {% endblock scripts %}
+  </body>
+</html>
