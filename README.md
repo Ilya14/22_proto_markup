@@ -5,7 +5,7 @@
 Project of the site of construction materials suppliers.
 The site is available at the [address](https://Ilya14.github.io/22_proto_markup/).
 
-The site is checked by W3C validator and YSlow.
+The site is checked by W3C validator and YSlow (Grade A, overall performance score: 91).
 
 ## Site generation
 
