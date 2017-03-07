@@ -7,12 +7,9 @@ def load_data(filepath):
         return json.load(file_handler)
 
 
-def pretty_print_json(data):
-    print(json.dumps(data, indent=4, ensure_ascii=False))
-
-
 if __name__ == "__main__":
-    applications = load_data('./templates/json/applications.json')
+    applications_json_dir = './templates/json/applications.json'
+    applications = load_data(applications_json_dir)
     index_context = {'last_applications': applications[:5]}
     applications_page1_context = {'applications': applications[:5]}
     applications_page2_context = {'applications': applications[5:10]}

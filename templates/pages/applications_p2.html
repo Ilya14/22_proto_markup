@@ -5,10 +5,10 @@
     {% block content %}
     <div class="navbar-container">
       <div class="row">
-        <div class="col-md-2" align="center">
+        <div class="col-md-2" style="text-align:center;">
           <img src="../img/logo.png" class="img-rounded" alt="Логотип" width="64" height="64">
         </div>
-        <div class="col-md-10" align="left">
+        <div class="col-md-10" style="text-align:left;">
           <ol class="breadcrumb">
             <li><a href="../index.html">Главная</a></li>
             <li class="active">Заявки</li>
@@ -28,52 +28,48 @@
         <thead>
           <tr>
             <th>
-              <div class="row">
-                <div class="col-md-6" align="left">
-                  раздел: 
-                  <span class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                      Все <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#">Действие</a></li>
-                    </ul>
-                 </span>
-                </div>
-                <div class="col-md-6" align="right">
-                  регион: 
-                  <span class="dropdown">
-                    <a id="AppsRegionString" class="dropdown-toggle" data-toggle="dropdown" href="#">
-                     Выбрать <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                     <li><a href="#">Действие</a></li>
-                    </ul>
-                  </span>
-                </div>
-              </div> <!-- row -->
+              <div class="dropdown">
+                раздел: 
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  Все <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Раздел</a></li>
+                 </ul>
+              </div>
+            </th>
+            <th style="text-align:right;">
+              <div class="dropdown">
+                регион: 
+                <a id="AppsRegionString" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  Выбрать <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a href="#">Регион</a></li>
+                </ul>
+              </div>
             </th>
           </tr>
         </thead>
         <tbody>
           {% for app in applications %}
           <tr>
-            <td>
+            <td colspan="2">
               <div class="row">
-                <div class="col-md-6" align="left">
+                <div class="col-md-6" style="text-align:left;">
                   <span class="text-muted">{{app['date']}}</span>
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6" style="text-align:right;">
                   <a class="text-muted" href="#"><span class="glyphicon glyphicon-star"></span> в закладки</a>
                 </div>
               </div> <!-- row -->
               <div class="row">
-                <div class="col-md-12" align="left">
+                <div class="col-md-12" style="text-align:left;">
                   <p>{{app['description']}}</p>
                   <p>{{app['user_name']}}</p>
                 </div>
               </div> <!-- row -->
-              <div class="row" align="left">
+              <div class="row" style="text-align:left;">
                 <div class="col-md-3">
                   <button type="button" class="btn btn-primary btn-xs">Показать телефон</button>
                 </div>
@@ -88,14 +84,14 @@
       </table>
 
       <div class="row">
-        <div class="col-md-12" align="center">
+        <div class="col-md-12" style="text-align:center;">
           <button type="button" class="btn btn-primary">Показать еще</button>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-12" align="center">
-          <ul class="pagination" align="center">
+        <div class="col-md-12" style="text-align:center;">
+          <ul class="pagination" style="text-align:center;">
             <li><a href="applications_p1.html">&laquo;</a></li>
             <li><a href="applications_p1.html">1</a></li>
             <li class="active"><a href="#">2</a></li>
