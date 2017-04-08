@@ -6,11 +6,11 @@
     <div class="navbar-container">
       <div class="row">
         <div class="col-md-2" style="text-align:center;">
-          <img src="../img/logo.png" class="img-rounded" alt="Логотип" width="64" height="64">
+          <img src="{{static['img']['logo']}}" class="img-rounded" alt="Логотип" width="64" height="64">
         </div>
         <div class="col-md-10" style="text-align:left;">
           <ol class="breadcrumb">
-            <li><a href="../index.html">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li class="active">Заявки</li>
           </ol>
         </div>
@@ -23,7 +23,7 @@
         <h1>Заявки</h1>        
       </div>
      
-      <!-- applications -->
+     <!-- applications -->
       <table class="table table-hover">
         <thead>
           <tr>
@@ -41,7 +41,7 @@
             <th style="text-align:right;">
               <div class="dropdown">
                 регион: 
-                <a id="AppsRegionString" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                   Выбрать <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -52,21 +52,21 @@
           </tr>
         </thead>
         <tbody>
-          {% for app in applications %}
+          {% for application in applications %}
+          <tr>
+            <td>
+              <span class="text-muted">{{application['date']}}</span>
+            </td>
+            <td style="text-align:right;">
+              <a class="text-muted" href="#"><span class="glyphicon glyphicon-star"></span> в закладки</a>
+            </td>
+          </tr>
           <tr>
             <td colspan="2">
               <div class="row">
-                <div class="col-md-6" style="text-align:left;">
-                  <span class="text-muted">{{app['date']}}</span>
-                </div>
-                <div class="col-md-6" style="text-align:right;">
-                  <a class="text-muted" href="#"><span class="glyphicon glyphicon-star"></span> в закладки</a>
-                </div>
-              </div> <!-- row -->
-              <div class="row">
                 <div class="col-md-12" style="text-align:left;">
-                  <p>{{app['description']}}</p>
-                  <p>{{app['user_name']}}</p>
+                  <p>{{application['description']}}</p>
+                  <p>{{application['user_name']}}</p>
                 </div>
               </div> <!-- row -->
               <div class="row" style="text-align:left;">
@@ -74,7 +74,7 @@
                   <button type="button" class="btn btn-primary btn-xs">Показать телефон</button>
                 </div>
                 <div class="col-md-3">
-                  <p>{{app['viewings_count']}} просмотров</p>
+                  <p>{{application['viewings_count']}} просмотров</p>
                 </div>
               </div> <!-- row -->
             </td>
@@ -92,10 +92,10 @@
       <div class="row">
         <div class="col-md-12" style="text-align:center;">
           <ul class="pagination" style="text-align:center;">
-            <li class="disabled"><a href="#">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="applications_p2.html">2</a></li>
-            <li><a href="applications_p2.html">&raquo;</a></li>
+            <li><a href="applications_page1.html">&laquo;</a></li>
+            <li><a href="applications_page1.html">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
           </ul>
         </div>
       </div>

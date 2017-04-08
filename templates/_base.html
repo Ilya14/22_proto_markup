@@ -8,16 +8,16 @@
     <meta name="author" content="">
 
     {% block head %}
-    <title>{% block title %}{% endblock title %}</title>
+    <title>{% block title %}{% endblock %}</title>
 
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="{{static['img']['favicon']}}">
 
     <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{static['css']['bootstrap']}}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="{{static['css']['jumbotron']}}" rel="stylesheet">
+    <link href="{{static['css']['style']}}" rel="stylesheet">
     {% endblock head %}
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -69,21 +69,36 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">            
             <li class="dropdown" data-toggle="popover">
-              <a id="NavbarRegionString" class="dropdown-toggle popover-bottom" data-toggle="dropdown">
+              <a class="dropdown-toggle popover-bottom" data-toggle="dropdown">
                 Регион <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="#" onclick="setRegion(this);">Москва и область</a></li>
                 <li><a href="#" onclick="setRegion(this);">Санкт-Петербург и область</a></li>
                 <li><a href="#" onclick="setRegion(this);">Новосибирск и область</a></li>
-              </ul>
+              </ul>       
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="navbar-link"><a href={% block account %}account.html{% endblock %}>Леонид Федорович</a></li>
+            <li class="navbar-link"><a href="account.html">Леонид Федорович</a></li>
             <li><a href="#">Выход</a></li>
           </ul>
         </div><!--/.nav-collapse -->
+      </div>
+     
+      <!--popover-->
+      <div class="popover fade bottom in" role="tooltip" style="width: 500px;top: 50px; left: 0px; display: block;">
+        <div class="arrow" style="left: 23.7319%;"></div>
+        <h3 class="popover-title" style="text-align:center;">
+          <p>Ваш регион - <b>Новосибирск и область</b></p>
+        </h3>
+        <div class="popover-content" style="text-align:center;">
+          <p>Угадали?</p>
+          <div class="btn-group" aria-label="..." role="group">
+            <button class="btn btn-default" type="button" onclick="onRegionOk();" style="width: 50px;">Да</button>
+            <button class="btn btn-default" data-target="#RegionsModal" data-toggle="modal" type="button" onclick="onRegionNo();" style="width: 50px;">Нет</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -95,9 +110,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block scripts %}
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="{{static['js']['jquery']}}"></script>
+    <script src="{{static['js']['bootstrap']}}"></script>
+    <script src="{{static['js']['scripts']}}"></script>
     {% endblock scripts %}
   </body>
 </html>
