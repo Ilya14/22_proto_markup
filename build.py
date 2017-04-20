@@ -47,8 +47,7 @@ def get_static():
         },
         'js': {
             'jquery': 'js/jquery-3.1.1.min.js',
-            'bootstrap': 'js/bootstrap.min.js',
-            'scripts': 'js/scripts.js',
+            'bootstrap': 'js/bootstrap.min.js'
         },
         'img': {
             'favicon': 'img/favicon.ico',
