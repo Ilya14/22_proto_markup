@@ -32,7 +32,7 @@
 
   <body> 
     <!-- Modal -->
-    <div id="RegionsModal" class="modal fade">
+    <div id="RegionsModal" class="modal fade js-modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -69,7 +69,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">            
             <li class="dropdown" data-toggle="popover">
-              <a class="dropdown-toggle popover-bottom" data-toggle="dropdown">
+              <a class="dropdown-toggle popover-bottom js-navbar-region" data-toggle="dropdown">
                 Регион <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
@@ -87,10 +87,10 @@
       </div>
      
       <!--popover-->
-      <div class="popover fade bottom in" role="tooltip" style="width: 500px;top: 50px; left: 0px; display: block;">
+      <div class="popover fade bottom in js-popover" role="tooltip" style="width: 500px;top: 50px; left: 0px; display: block;">
         <div class="arrow" style="left: 23.7319%;"></div>
         <h3 class="popover-title" style="text-align:center;">
-          Ваш регион - <b>Новосибирск и область</b>
+          Ваш регион - <b class="js-popover-region">Новосибирск и область</b>
         </h3>
         <div class="popover-content" style="text-align:center;">
           <p>Угадали?</p>
@@ -117,21 +117,22 @@
       function setRegion(region)
       {
         var selectedString = $(region).text();
-        $('.navbar').find('.popover-bottom').html('Регион: ' + selectedString + '<b class="caret"></b>');
-        $('.jumbotron').find('.dropdown-toggle').html('в ' + selectedString + '<span class="caret"></span>');
-        $('.table').find("[style='text-align:right;']").find('.dropdown-toggle').html(selectedString + '<span class="caret"></span>');
-        $('.modal').modal('hide');
+
+        $('.js-navbar-region').html('Регион: ' + selectedString + '<b class="caret"></b>');
+        $('.js-jumbotron-region').html('в ' + selectedString + '<span class="caret"></span>');
+        $('.js-table-region').html(selectedString + '<span class="caret"></span>');
+        $('.js-modal').modal('hide');
       }
 
       function onRegionOk()
       {
-        setRegion($('.popover').find('b'));
-        $('.popover').remove();
+        setRegion($('.js-popover').find('.js-popover-region'));
+        $('.js-popover').remove();
       }
 
       function onRegionNo()
       {
-        $('.popover').remove();
+        $('.js-popover').remove();
       }
     </script>
     {% endblock scripts %}
